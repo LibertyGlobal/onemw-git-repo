@@ -113,7 +113,7 @@ class _FileDescriptorStreamsNonBlocking(FileDescriptorStreams):
       return self.fd.fileno()
 
     def read(self):
-      return self.fd.read(4096)
+      return self.fd.read(16384)
 
     def close(self):
       self.fd.close()

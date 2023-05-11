@@ -364,7 +364,7 @@ class GitCommand(object):
           s_in.remove(s)
           continue
         if not hasattr(buf, 'encode'):
-          buf = buf.decode()
+          buf = buf.decode(errors='replace')
         if s.std_name == 'stdout':
           self.stdout += buf
         else:
